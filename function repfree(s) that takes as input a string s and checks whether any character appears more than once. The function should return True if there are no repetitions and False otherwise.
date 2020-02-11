@@ -1,0 +1,11 @@
+def repfree(s):
+ for i in range(len(s)-1):
+  for j in range(len(s)): 
+   if(i==j):
+    j=j+1
+    if s[i]==s[j]:
+     return(False)
+   else:   
+    if s[i]==s[j]:
+     return(False)
+ return(True)	
