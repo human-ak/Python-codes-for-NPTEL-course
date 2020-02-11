@@ -1,0 +1,30 @@
+def isAscending(list):
+    previous = list[0]
+    for i in range(1,len(list)):
+        if list[i] < previous:
+            return False
+        previous = list[i]
+    return True
+    
+ def isDescending(list):
+    previous = list[0]
+    for i in range(1,len(list)):
+        if list[i] > previous:
+            return False
+        previous = list[i]
+    return True
+    
+def hillvalley(l):
+  if len(l) < 2:
+    return False
+  elif l.index(min(l)) != 0 and l.index(min(l)) != len(l)-1:
+    list1=l[0:l.index(min(l))]
+    list2=l[l.index(min(l)):len(l)]
+    if isDescending(list1) == True and isAscending(list2) == True:
+      return True
+  elif l.index(max(l)) != 0 and l.index(max(l)) != len(l)-1:
+    list1=l[0:l.index(max(l))]
+    list2=l[l.index(max(l)):len(l)]
+    if isAscending(list1) == True and isDescending(list2) == True:
+      return True
+  return False    
