@@ -1,0 +1,6 @@
+def threesquares(m):
+ for a in range(0,m+1):
+   for b in range(0,m+1):
+     if (4**a)*(8*b+7) == m:
+       return(False)
+ return(True)
