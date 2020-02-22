@@ -1,0 +1,12 @@
+def sumsquare(l):
+    odd = []
+    even = []
+    if l != [] and all(isinstance(item, int) for item in l):
+        for x in l:
+            if x%2 == 0:
+                even.append(x**2)
+            else:
+                odd.append(x**2)
+    else:
+      return(print("Input a nonempty list of integers."))     
+    return([sum(odd),sum(even)])
